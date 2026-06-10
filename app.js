@@ -1,9 +1,9 @@
 const SCORE_RULES = [
   { key: "simple", label: "단순", points: 1 },
   { key: "valid", label: "유효", points: 50 },
-  { key: "gana", label: "가나", points: 500 },
-  { key: "dara1", label: "다라-1", points: 1000 },
-  { key: "dara2", label: "다라-2", points: 500 },
+  { key: "gana", label: "침례", points: 500 },
+  { key: "dara1", label: "출석-침례", points: 1000 },
+  { key: "dara2", label: "출석-잃은양", points: 500 },
   { key: "online", label: "온라인", points: 5 },
   { key: "preaching", label: "프리칭", points: 10 },
   { key: "elka", label: "엘카", points: 20 },
@@ -11,15 +11,15 @@ const SCORE_RULES = [
 ];
 
 const MISSIONS = [
-  "아침모임 10회",
-  "감사 인사 10회",
-  "새 친구 돕기 10회",
-  "정리정돈 10회",
-  "온라인 참여 10회",
-  "칭찬 나누기 10회",
-  "독서 활동 10회",
-  "팀 미션 10회",
-  "축제 준비 10회",
+  "단순전도 300명",
+  "아침기도모임 5회 참여",
+  "직장 동료에게 프리칭 3회 발표",
+  "침례 1명",
+  "출석 1명",
+  "온라인선교 5회",
+  "교회 초청 1명",
+  "유효전도 10명",
+  "VIP 전도 1명",
 ];
 
 const STORAGE_KEY = "block-festa-records-v1";
