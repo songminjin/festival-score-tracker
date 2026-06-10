@@ -105,7 +105,11 @@ function getTotals() {
 function buildStaticUi() {
   const dashboardRules = SCORE_RULES.filter(({ key }) => key !== "dara2").map((rule) =>
     rule.key === "dara1"
-      ? { key: "dara", label: "다라", pointsLabel: "다라-1 1,000점 · 다라-2 500점" }
+      ? {
+          key: "dara",
+          label: "출석",
+          pointsLabel: "출석-침례 1,000점 · 출석-잃은양 500점",
+        }
       : { ...rule, pointsLabel: `1개당 ${formatNumber(rule.points)}점` },
   );
 
@@ -169,7 +173,7 @@ function renderDashboard() {
   const daraTotal = totals.scoreCounts.dara1 + totals.scoreCounts.dara2;
   document.querySelector("#total-dara").textContent = `${formatNumber(daraTotal)}개`;
   document.querySelector("#detail-dara").textContent =
-    `다라-1 ${formatNumber(totals.scoreCounts.dara1)}개 · 다라-2 ${formatNumber(totals.scoreCounts.dara2)}개`;
+    `출석-침례 ${formatNumber(totals.scoreCounts.dara1)}개 · 출석-잃은양 ${formatNumber(totals.scoreCounts.dara2)}개`;
 
   missionGrid.innerHTML = MISSIONS.map((mission, index) => {
     const key = `mission${index + 1}`;
