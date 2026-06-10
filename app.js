@@ -178,8 +178,10 @@ function renderDashboard() {
     const completed = count >= 10;
     return `
       <article class="mission-card ${completed ? "completed" : ""}">
-        <span class="mission-number">${String(index + 1).padStart(2, "0")}</span>
-        <h3>${mission}</h3>
+        <h3>
+          <span class="mission-number">${String(index + 1).padStart(2, "0")}</span>
+          <span>${mission}</span>
+        </h3>
         <div
           class="progress-track"
           role="progressbar"
